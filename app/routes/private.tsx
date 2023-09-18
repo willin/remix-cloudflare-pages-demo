@@ -7,7 +7,7 @@ export const action: ActionFunction = async ({ request }) => {
 };
 
 export const loader: LoaderFunction = async ({ request, context }) => {
-  const { profile } = await context.services.auth.authenticator.isAuthenticated(request, {
+  const profile = await context.services.auth.authenticator.isAuthenticated(request, {
     failureRedirect: '/'
   });
 
