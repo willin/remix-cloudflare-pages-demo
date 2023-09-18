@@ -67,8 +67,8 @@ export class AuthService implements IAuthService {
             username: profile._json.login,
             email: profile._json.email ?? profile.emails?.at(0) ?? null,
             avatar: profile._json.avatar_url,
-            githubId: profile._json.node_id,
-            isSponsor: await gh.isSponsoringMe(profile._json.node_id)
+            githubId: profile._json.node_id
+            // isSponsor: await gh.isSponsoringMe(profile._json.node_id)
           };
         }
       )
