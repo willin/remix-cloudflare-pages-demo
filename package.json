@@ -1,7 +1,9 @@
 {
-  "name": "cloudflare-pages-d1-demo",
   "private": true,
-  "sideEffects": false,
+  "name": "cloudflare-pages-d1-demo",
+  "description": "R3mix of Willin.Wang",
+  "author": "Willin Wang <willin@willin.org> (https://willin.wang/)",
+  "license": "GPL-3.0",
   "type": "module",
   "scripts": {
     "build": "remix build",
@@ -14,19 +16,22 @@
     "@remix-run/cloudflare-pages": "^2.0.0",
     "@remix-run/css-bundle": "^2.0.0",
     "@remix-run/react": "^2.0.0",
-    "isbot": "^3.6.8",
+    "isbot": "^3.6.13",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remix-auth": "^3.5.1",
+    "remix-auth-github": "^1.6.0",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230518.0",
+    "@cloudflare/workers-types": "^4.20230914.0",
     "@remix-run/dev": "^2.0.0",
     "@remix-run/eslint-config": "^2.0.0",
-    "@types/react": "^18.2.20",
+    "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "eslint": "^8.38.0",
-    "typescript": "^5.1.0",
-    "wrangler": "^3.1.1"
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.8.0"
   },
   "engines": {
     "node": ">=18.0.0"
