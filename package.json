@@ -8,14 +8,18 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual -c \"npm run start\"",
-    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
-    "typecheck": "tsc"
+    "start": "wrangler pages dev --compatibility-date=2023-08-15 ./public --d1=demo --local",
+    "typecheck": "tsc",
+    "db:schema": "drizzle-kit generate:sqlite --schema=./server/db/schema.ts --out=./migrations",
+    "db:init": "wrangler d1 migrations list demo",
+    "db:migration": "npx wrangler d1 migrations apply demo"
   },
   "dependencies": {
     "@remix-run/cloudflare": "^2.0.0",
     "@remix-run/cloudflare-pages": "^2.0.0",
     "@remix-run/css-bundle": "^2.0.0",
     "@remix-run/react": "^2.0.0",
+    "drizzle-orm": "^0.28.6",
     "isbot": "^3.6.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,6 +33,7 @@
     "@remix-run/eslint-config": "^2.0.0",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "drizzle-kit": "^0.19.13",
     "eslint": "^8.49.0",
     "typescript": "^5.2.2",
     "wrangler": "^3.8.0"
