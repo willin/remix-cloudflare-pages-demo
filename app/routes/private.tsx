@@ -3,7 +3,7 @@ import { json } from '@remix-run/cloudflare';
 import { Form, useLoaderData } from '@remix-run/react';
 
 export const action: ActionFunction = async ({ request, context }) => {
-  await context.services.auth.logout(request, { redirectTo: '/' });
+  await context.services.auth.authenticator.logout(request, { redirectTo: '/' });
 };
 
 export const loader: LoaderFunction = async ({ request, context }) => {
